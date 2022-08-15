@@ -1,7 +1,6 @@
 from .base_page import BasePage
 from .locators import BasketPageLocators
 
-
 class BasketPage(BasePage):
     def should_not_be_product_item(self):
         assert self.is_not_element_present(*BasketPageLocators.PRODUCT_ITEM), \
@@ -11,4 +10,3 @@ class BasketPage(BasePage):
         assert "empty" in text, \
        "Not correct message about empty basket"
 
-    

@@ -1,12 +1,10 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
 
-
 class ProductPage(BasePage):
     def add_product_to_basket(self):
         basket_button = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
         basket_button.click()
-        #self.solve_quiz_and_get_code()
         
     def should_be_message_of_product_adding(self):
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
